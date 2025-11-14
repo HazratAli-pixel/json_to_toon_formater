@@ -10,7 +10,10 @@ export async function formatToon(value) {
   }
 
   try {
-    const result= await encode(value)
+    console.log(value)
+    
+    const result= await encode(JSON.parse(value))
+    console.log(result)
 
     return JSON.stringify(result);
   } catch (error) {

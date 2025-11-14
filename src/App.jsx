@@ -8,12 +8,19 @@ import './styles/App.css';
 
 function App() {
   const [language, setLanguage] = useState('en');
-  const [input, setInput] = useState('');
+  const dd = {
+  users: [
+    { id: 1, name: 'Alice', role: 'admin' },
+    { id: 2, name: 'Bob', role: 'user' }
+  ]
+}
+  const [input, setInput] = useState(dd);
   const [output, setOutput] = useState('');
   const [error, setError] = useState('');
   const t = useMemo(() => translations[language], [language]);
+  
 
-  const handleFormat = () => {
+  const handleFormat = async () => {
     if (!input.trim()) {
       setError(t.emptyError);
       setOutput('');
@@ -21,13 +28,13 @@ function App() {
     }
 
     try {
-      const jsonValue = JSON.parse(input);
-      const toonResult = formatToon(jsonValue);
+      // const jsonValue = JSON.parse(input);
+      const toonResult =await formatToon(input);
       setOutput(toonResult);
       setError('');
     } catch (err) {
       try {
-        const toonResult = formatToon(input);
+        const toonResult = await formatToon(input);
         setOutput(toonResult);
         setError('');
       } catch (innerErr) {
@@ -42,6 +49,8 @@ function App() {
     setOutput('');
     setError('');
   };
+
+  console.log(output,"----")
 
   return (
     <div className="app-shell">
