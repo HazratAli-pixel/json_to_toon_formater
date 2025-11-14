@@ -14,7 +14,7 @@ function App() {
     { id: 2, name: 'Bob', role: 'user' }
   ]
 }
-  const [input, setInput] = useState(dd);
+  const [input, setInput] = useState(JSON.stringify(dd));
   const [output, setOutput] = useState('');
   const [error, setError] = useState('');
   const t = useMemo(() => translations[language], [language]);
