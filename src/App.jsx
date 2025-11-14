@@ -86,6 +86,9 @@ function App() {
               {t.clearButton}
             </button>
           </div>
+          {
+            input && <p>Charecter Count: {input.length}</p>
+          }
           {error && <p className="error-message">{error}</p>}
         </div>
 

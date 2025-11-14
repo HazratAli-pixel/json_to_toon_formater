@@ -41,6 +41,7 @@ function OutputPanel({
       <pre className="output-area">
         {value ? value : <span className="empty-output">{emptyLabel}</span>}
       </pre>
+      <p>Charecter Count: {value.length}</p>
     </div>
   );
 }
