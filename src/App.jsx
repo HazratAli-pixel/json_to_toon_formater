@@ -50,8 +50,6 @@ function App() {
     setError('');
   };
 
-  console.log(output,"----")
-
   return (
     <div className="app-shell">
       <Header
