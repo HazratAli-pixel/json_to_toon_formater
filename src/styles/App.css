@@ -83,7 +83,9 @@
 
 .json-textarea {
   width: 100%;
-  min-height: 260px;
+    min-height: 360px;
+  max-height: 600px;
+  overflow-y: auto;
   padding: 1rem 1.25rem;
   font-family: 'Fira Code', 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
@@ -155,7 +157,9 @@ button.secondary:disabled {
 }
 
 .output-area {
-  min-height: 260px;
+  min-height: 360px;
+  max-height: 600px;
+  overflow-y: auto;
   margin: 0;
   padding: 1.25rem;
   border-radius: 0.75rem;
