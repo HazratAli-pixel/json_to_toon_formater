@@ -1368,6 +1368,11 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.15.0.tgz#8184bcb37791e6d3c3c13a9bfbe4af263f66665f"
   integrity sha512-ojSshQPKwVvSMR8yT2L/QtUkV5SXi/IfDiJ4/8d6UbTPjiHVmxZzUAzGD8Tzks1b9+qQkZa0isUOvYObedITaw==
 
+"@toon-format/toon@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@toon-format/toon/-/toon-1.0.0.tgz#00c8f525a4854d044c89bb21633ead90d996519d"
+  integrity sha512-2gIk8LaqrzpurNDaDWZ72kucAGcBbxJxUnp+4ZP+Pny/QVNdMVf97yzSDTI3ed2q8ypjj8T271P6iE3bRmQBNw==
+
 "@types/babel__core@^7.20.5":
   version "7.20.5"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.20.5.tgz#3df15f27ba85319caa07ba08d0721889bb39c017"
