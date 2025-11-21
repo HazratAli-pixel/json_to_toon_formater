@@ -1,0 +1,30 @@
+{
+  "Home": {
+    "notice": "Prueba a cambiar el idioma para ver next-intl en acción.",
+    "title": "Crea experiencias multilingües sin fricción",
+    "subtitle": "Este proyecto incluye rutas con prefijo de idioma, carga de mensajes y utilidades listas para usar para que te concentres en tu producto.",
+    "primaryCta": "Explorar el inicio",
+    "secondaryCta": "Internacionalización impulsada por next-intl",
+    "cards": {
+      "localization": {
+        "title": "Textos localizados",
+        "body": "Traduce títulos, párrafos y botones con colecciones de mensajes bien organizadas."
+      },
+      "routing": {
+        "title": "Rutas con prefijo de idioma",
+        "body": "El middleware dirige a los usuarios a su idioma preferido con URLs limpias como /en o /es."
+      },
+      "translation": {
+        "title": "Ayudantes en cliente y servidor",
+        "body": "Utiliza hooks como useTranslations o utilidades en el servidor para mantener el contenido consistente en cada renderizado."
+      }
+    },
+    "footer": "Creado con Next.js 14 y next-intl",
+    "docsLink": "Leer la documentación"
+  },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o fue movida.",
+    "action": "Volver al inicio"
+  }
+}

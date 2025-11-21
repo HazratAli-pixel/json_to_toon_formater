@@ -1,69 +1,66 @@
-# Toon JSON Formatter
+# Next.js + next-intl Multilingual Starter
 
-A single-page React experience that converts JSON payloads into the [Toon format](https://github.com/toon-format/toon) using the official `toon-format` package. The interface is designed for both English and Bangla speakers and is ready to deploy on Vercel.
+A full Next.js 14 starter configured with the [`next-intl`](https://next-intl-docs.vercel.app/) package for locale-aware routing, translations, and client helpers. The project includes two locales (English and Spanish) with easily extendable message catalogs.
 
 ## Features
 
-- ✨ Elegant gradient UI with responsive layout
-- 🌐 Multilingual copy (English & Bangla)
-- 🧩 Integrates with `toon-format` to transform JSON into Toon output
-- 📋 One-click copy of the generated Toon data
-- 🚀 Built with Vite + React for rapid Vercel deployments
+- 🌐 **Internationalization first**: Locale-prefixed routes, middleware redirection, and typed locale config.
+- ⚡ **App Router ready**: Uses the `app/[locale]` segment with server components and client-side translation hooks.
+- 🧭 **Language switcher**: Seamlessly switch between locales without losing your place.
+- 🎨 **Modern UI**: Gradient hero, call-to-action buttons, and informational cards styled with global CSS.
+
+## Project Structure
+
+- `app/layout.tsx` – Root layout loading global styles.
+- `app/[locale]/layout.tsx` – Locale layout that loads translations and wraps pages with `NextIntlClientProvider`.
+- `app/[locale]/page.tsx` – Example landing page content using `useTranslations`.
+- `app/[locale]/not-found.tsx` – Localized 404 view.
+- `messages/` – JSON translation files for each locale.
+- `middleware.ts` & `next.config.mjs` – Locale-aware routing powered by `next-intl` middleware and plugin.
 
 ## Getting Started
 
-1. **Install dependencies**
+1. **Install dependencies** (requires Node 18+)
 
    ```bash
+   yarn install
+   # or
    npm install
    ```
 
-   > The project depends on the `toon-format` package hosted on GitHub. Ensure your environment can access GitHub from the command line for the installation to succeed.
-
-2. **Run locally**
+2. **Run the development server**
 
    ```bash
+   yarn dev
+   # or
    npm run dev
    ```
 
-   Open the printed URL (defaults to `http://localhost:5173`) to use the formatter.
+   Visit the printed URL (default: `http://localhost:3000`). You will be redirected to `/en` and can toggle to `/es` using the language switcher.
 
 3. **Build for production**
 
    ```bash
+   yarn build
+   # or
    npm run build
    ```
 
-   The production-ready assets will be available inside `dist/`, ready to upload to Vercel.
-
-4. **Preview the production bundle (optional)**
+4. **Start the production server**
 
    ```bash
-   npm run preview
+   yarn start
+   # or
+   npm start
    ```
 
-## Usage
+## Extending Locales
 
-1. Paste JSON text into the **Input JSON** area.
-2. Choose **Format to Toon** to convert it using `toon-format`.
-3. Copy the formatted output using the **Copy output** button.
-4. Toggle between **English** and **বাংলা** for localized labels and helper text.
-
-If the input is not valid JSON, the formatter falls back to sending the raw string to `toon-format`. Any error messages returned by the package are surfaced in the UI.
-
-## Deploying to Vercel
-
-1. Push this repository to GitHub (or another Git provider supported by Vercel).
-2. Create a new Vercel project and import the repository.
-3. When prompted, set the **Build Command** to `npm run build` and the **Output Directory** to `dist`.
-4. Deploy—Vercel will run the build and host the generated static assets.
-
-## Customization
-
-- Update the copy inside `src/utils/translations.js` to adjust the multilingual strings.
-- Adjust styling within `src/styles/App.css` for layout and theming tweaks.
-- Enhance error handling or telemetry by editing the helper in `src/utils/formatToon.js`.
+1. Add a new locale code to `locales` in `i18n.ts`.
+2. Create a corresponding JSON file in `messages/` (e.g., `messages/fr.json`).
+3. Add translated copy mirroring the existing message structure.
+4. Restart the dev server to pick up the new locale.
 
 ## License
 
-This project is provided without a specific license. Refer to the [toon-format repository](https://github.com/toon-format/toon) for its licensing details when redistributing the formatter logic.
+This starter is provided without a specific license. Review your dependencies' licenses before distributing.

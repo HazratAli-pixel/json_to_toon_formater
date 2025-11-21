@@ -1,0 +1,30 @@
+{
+  "Home": {
+    "notice": "Try switching languages to see next-intl in action.",
+    "title": "Build multilingual experiences without friction",
+    "subtitle": "This starter ships with locale-aware routing, message loading, and client helpers so you can focus on your product.",
+    "primaryCta": "Explore the starter",
+    "secondaryCta": "Internationalization powered by next-intl",
+    "cards": {
+      "localization": {
+        "title": "Localized UI copy",
+        "body": "Translate headings, body text, buttons, and more using organized JSON message bundles."
+      },
+      "routing": {
+        "title": "Locale-prefixed routing",
+        "body": "Middleware ensures users are redirected to their preferred locale with clean URLs like /en or /es."
+      },
+      "translation": {
+        "title": "Client & server helpers",
+        "body": "Use hooks such as useTranslations or server utilities to keep content consistent in every render pathway."
+      }
+    },
+    "footer": "Built with Next.js 14 and next-intl",
+    "docsLink": "Read the documentation"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for could not be located.",
+    "action": "Back to home"
+  }
+}
